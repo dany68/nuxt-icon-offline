@@ -3,11 +3,11 @@
 ## Current State:
 Basic install of Nuxt 3 with [nuxt-icon](https://github.com/nuxt-modules/icon) package.
 
-Define in ./icons.txt the icons that need to be downloaded offline with the format `<iconSet>:<iconName>`. Each icon must be in a separate line (see the default ./icons.txt), and run:
+Define in ./icons.txt the icons that need to be downloaded offline with the format `<iconSet>:<iconName>`. Each icon must be in a separate line (see the default ./icons.txt file), and run:
 ```
 npm run download-icons
 ```
-The svg icons will be downloaded in ./assets/icons
+The svg icons will be downloaded/sync in ./assets/icons
 
 ## Todo
 - [ ] Parallel download with `Promise.all`
