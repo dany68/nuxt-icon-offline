@@ -1,75 +1,16 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 + Offline Nuxt-Icon
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Current State:
+Basic install of Nuxt 3 with [nuxt-icon](https://github.com/nuxt-modules/icon) package.
 
-## Setup
-
-Make sure to install the dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+Define in ./icons.txt the icons that need to be downloaded offline with the format `<iconSet>:<iconName>`. Each icon must be in a separate line (see the default ./icons.txt), and run:
 ```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+npm run download-icons
 ```
+The svg icons will be downloaded in ./assets/icons
 
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Todo
+- [ ] Parallel download with `Promise.all`
+- [ ] Pull request on nuxt-icon to use SVG file from assets folder (instead of creating a vue component for each icon)
+- [ ] Pull request on nuxt-icon to check if icon exists in assets folder before using the Iconify API
+- [ ] Detect icons used in /pages and /components instead of using an icons.txt file ?
